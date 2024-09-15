@@ -64,6 +64,20 @@ let counter2 = 10;
 
 console.log(++counter2);
 
+// Унарні оператори
+// + , -
+
+console.log(typeof -'675.5');
+console.log(-'asdqwexcxmfgfs'); // NaN
+
+console.log(+true);
+console.log(+'-1275');
+
+// перетворення типу на числовий
+console.log(+null);
+
+
+
 
 
 
