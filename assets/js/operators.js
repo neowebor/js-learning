@@ -141,6 +141,20 @@ console.log((testNumber > 0 && testNumber < 100) + ' ?');
 console.log(false || true);
 
 
+// Присвоєння
+/* 
+
+*/
+let age = 71;
+
+// age = age + 5;
+age += 5;
+age -= 5;
+
+console.log(age);
+
+
+
 
 
 
