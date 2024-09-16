@@ -99,8 +99,31 @@ console.log(10 >= 10); // true
 
 console.log('cat' > 'm'); // false
 
+// рівність значень
 
+/* 
+  == - оператор рівності
+  === - оператор жорсткої рівності
 
+  != - оператор нерівності
+  !== оператор жорсткої нерівності
+
+*/
+
+console.log(15 === 15); // true
+console.log("Anton" === "Anton"); // true
+
+console.log(1000 === '1000'); // false
+console.log(1000 == '1000'); // true
+
+// Логічне заперечення
+
+console.log(!true);
+
+console.log(!0); // true
+console.log(!null); // true
+console.log(!undefined); // true
+console.log(!NaN); // true
 
 
 
