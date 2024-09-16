@@ -12,6 +12,17 @@
 
 // console.log(username);
 
-const userName = prompt('Enter your name');
+// const userName = prompt('Enter your name');
 
-alert('Hello, ' + userName + '!')
+// alert('Hello, ' + userName + '!')
+
+// const num1 = prompt("Enter first number");
+// const num2 = prompt("Enter second number");
+
+// alert(+num1 + +num2)
+
+const num1 = parseInt(prompt("Enter first number"));
+const num2 = parseInt(prompt("Enter second number"));
+
+alert(num1 + num2)
+
