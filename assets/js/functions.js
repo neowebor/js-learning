@@ -31,7 +31,7 @@
 
 
 // function expression (функціональний вираз)
-const myIDontKnowThisNumberFunction = function(firstNumber, secondNumber) {
+const getSumOfTwoNumbers = function(firstNumber, secondNumber) {
   // тіло функції - блок коду який буде виконано коли функція запуститься
   // console.log('Hello from function');
   // console.log('You can do anything you want here'); 
@@ -47,7 +47,7 @@ const myIDontKnowThisNumberFunction = function(firstNumber, secondNumber) {
   return sumResult;
 }
 
-const result = myIDontKnowThisNumberFunction(10, 5)
+const result = getSumOfTwoNumbers(10, 5);
 
 console.log('Result is: ' + result);
 
