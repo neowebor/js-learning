@@ -31,12 +31,15 @@
 
 
 // function expression (функціональний вираз)
-const myIDontKnowThisNumberFunction = function() {
+const myIDontKnowThisNumberFunction = function(userValue) {
   // тіло функції - блок коду який буде виконано коли функція запуститься
   console.log('Hello from function');
   console.log('You can do anything you want here'); 
+  console.log('Ваше значення: ' + userValue);
+  
 }
 
-myIDontKnowThisNumberFunction();
+myIDontKnowThisNumberFunction(10);
+myIDontKnowThisNumberFunction()
 
 
