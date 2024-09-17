@@ -30,7 +30,7 @@
 // Створення функцій
 
 
-//
+// function expression (функціональний вираз)
 const myIDontKnowThisNumberFunction = function() {
   // тіло функції - блок коду який буде виконано коли функція запуститься
   console.log('Hello from function');
