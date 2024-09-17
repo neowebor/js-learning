@@ -37,6 +37,9 @@ const getSumOfTwoNumbers = function(firstNumber, secondNumber) {
   // console.log('You can do anything you want here'); 
   // console.log('Ваше значення: ' + firstParam);
 
+  // const firstNumber = +prompt("Enter first number");
+  // const secondNumber = +prompt("Enter second number");
+
   const sumResult = firstNumber + secondNumber;
 
   // console.log(firstNumber + secondNumber);
@@ -47,7 +50,10 @@ const getSumOfTwoNumbers = function(firstNumber, secondNumber) {
   return sumResult;
 }
 
-const result = getSumOfTwoNumbers(10, 5);
+const num1 = +prompt('Enter first number');
+const num2 = +prompt('Enter second number');
+
+const result = getSumOfTwoNumbers(num1, num2);
 
 console.log('Result is: ' + result);
 
