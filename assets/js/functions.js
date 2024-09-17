@@ -21,8 +21,22 @@
 
 // alert(+num1 + +num2)
 
-const num1 = parseInt(prompt("Enter first number"));
-const num2 = parseInt(prompt("Enter second number"));
+// const num1 = parseInt(prompt("Enter first number"));
+// const num2 = parseInt(prompt("Enter second number"));
 
-alert(num1 + num2)
+// alert(num1 + num2)
+
+
+// Створення функцій
+
+
+//
+const myIDontKnowThisNumberFunction = function() {
+  // тіло функції - блок коду який буде виконано коли функція запуститься
+  console.log('Hello from function');
+  console.log('You can do anything you want here'); 
+}
+
+myIDontKnowThisNumberFunction();
+
 
