@@ -4,12 +4,12 @@
 
 // let number = 10;
 
-const testFunc = function() {
-  let number = 5;
-  console.log(number);
+// const testFunc = function() {
+//   let number = 5;
+//   console.log(number);
   
-}
+// }
 
-testFunc();
+// testFunc();
 
-console.log(number);
+// console.log(number);

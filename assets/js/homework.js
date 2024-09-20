@@ -79,6 +79,8 @@
 //   if(purchaseAmount >= 1500) {
 //     discountPercentage = 0.10;
 //   } 
+// 
+//   purchaseAmount >= 1500 ? discountPercentage = 0.10 : discountPercentage = 0.05; 
 
 //   const discount = purchaseAmount * discountPercentage;
 //   const discountedPrice = purchaseAmount - discount;

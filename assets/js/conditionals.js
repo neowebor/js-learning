@@ -1,7 +1,7 @@
 // умовні конструкції
 // виконувати певні дії за певних умов
 
-console.log('1');
+// console.log('1');
 
 /* 
   if ( умова ) {
@@ -16,11 +16,15 @@ console.log('1');
 // }
 
 // console.log('3');
-let number = +prompt('Enter number')
+// let number = +prompt('Enter number')
 
-if (number > 0) {
-  console.log('Number is positive');
-} else {
-  console.log('Number is negative');
-}
+// if (number > 0) {
+//   console.log('Number is positive');
+// } else {
+//   console.log('Number is negative');
+// }
+
+
+// Тернарний оператор який може замінити вам конструкцію if() {} else {}
+
 
