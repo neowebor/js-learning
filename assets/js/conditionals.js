@@ -27,4 +27,77 @@
 
 // Тернарний оператор який може замінити вам конструкцію if() {} else {}
 
+// const userMessage = prompt('Test');
+
+// let text = userMessage === 'Test' ? 'yes' : 'no';
+
+// console.log(text);
+
+// конструкція switch ... case
+
+/*
+  може бути зручною коли ви хочете виконат певні дії виходячи з конкретних значень певної змінної або виразу
+
+  switch (змінная_або_вираз) {
+    case значення_А: {
+      // блок коду А
+    }
+
+    case значення_B: {
+      // блок коду В
+    }
+
+  }
+*/
+
+// let value = 1;
+
+// switch (value) {
+//   case 1: {
+//     alert('value прийняло значення 1');
+//     break;
+//   }
+//   case 2: {
+//     alert('value прийняло значення 2');
+//     break;
+//   }
+//   case 'test': {
+//     alert('value прийняло значення test');
+//     break;
+//   }
+
+//   default: {
+//     alert('default')
+//   }
+// }
+
+const getCardCashbackPercentage = function(cardLevel) {
+  let cashbackPercentage;
+
+  switch (cardLevel) {
+    case 'basic':
+    case 'basic+': {
+      cashbackPercentage = 1;
+      break;
+    }
+    case 'pro': {
+      cashbackPercentage = 1.1;
+      break;
+    }
+    case 'gold': {
+      cashbackPercentage = 2;
+      break;
+    }
+    case 'platinum': {
+      cashbackPercentage = 5;
+      break;
+    }
+    default: {
+      cashbackPercentage = 0;
+    }
+  }
+
+  return cashbackPercentage;
+}
+
 
