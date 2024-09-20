@@ -71,33 +71,76 @@
 //   }
 // }
 
-const getCardCashbackPercentage = function(cardLevel) {
-  let cashbackPercentage;
+// const getCardCashbackPercentage = function(cardLevel) {
+//   let cashbackPercentage;
 
-  switch (cardLevel) {
-    case 'basic':
-    case 'basic+': {
-      cashbackPercentage = 1;
-      break;
+//   switch (cardLevel) {
+//     case 'basic':
+//     case 'basic+': {
+//       cashbackPercentage = 1;
+//       break;
+//     }
+//     case 'pro': {
+//       cashbackPercentage = 1.1;
+//       break;
+//     }
+//     case 'gold': {
+//       cashbackPercentage = 2;
+//       break;
+//     }
+//     case 'platinum': {
+//       cashbackPercentage = 5;
+//       break;
+//     }
+//     default: {
+//       cashbackPercentage = 0;
+//     }
+//   }
+
+//   return cashbackPercentage;
+// }
+
+
+const getSeason = function(month) {
+  switch (month) {
+    case 'грудень':
+    case 12:
+    case 'січень':
+    case 1:
+    case 'лютий':
+    case 2: {
+      return 'Зіма'
     }
-    case 'pro': {
-      cashbackPercentage = 1.1;
-      break;
+    case 'березень':
+    case 3:
+    case 'квітень':
+    case 4:
+    case 'травень': 
+    case 5: {
+      return 'Весна'
     }
-    case 'gold': {
-      cashbackPercentage = 2;
-      break;
+    
+    case 'червень':
+    case 6:
+    case 'липень':
+    case 7:
+    case 'серпень':
+    case 8: {
+      return 'Літо'
     }
-    case 'platinum': {
-      cashbackPercentage = 5;
-      break;
+
+    case 'вересень':
+    case 9:
+    case 'жовтень':
+    case 10:
+    case 'листопад':
+    case 11: {
+      return 'Весна'
     }
+
     default: {
-      cashbackPercentage = 0;
+      return 'Такого місяця немає';
     }
   }
-
-  return cashbackPercentage;
 }
-
 
