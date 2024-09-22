@@ -101,46 +101,48 @@
 // }
 
 
-const getSeason = function(month) {
-  switch (month) {
-    case 'грудень':
-    case 12:
-    case 'січень':
-    case 1:
-    case 'лютий':
-    case 2: {
-      return 'Зіма'
-    }
-    case 'березень':
-    case 3:
-    case 'квітень':
-    case 4:
-    case 'травень': 
-    case 5: {
-      return 'Весна'
-    }
+// const getSeason = function(month) {
+//   switch (month) {
+//     case 'грудень':
+//     case 12:
+//     case 'січень':
+//     case 1:
+//     case 'лютий':
+//     case 2: {
+//       return 'Зіма'
+//     }
+//     case 'березень':
+//     case 3:
+//     case 'квітень':
+//     case 4:
+//     case 'травень': 
+//     case 5: {
+//       return 'Весна'
+//     }
     
-    case 'червень':
-    case 6:
-    case 'липень':
-    case 7:
-    case 'серпень':
-    case 8: {
-      return 'Літо'
-    }
+//     case 'червень':
+//     case 6:
+//     case 'липень':
+//     case 7:
+//     case 'серпень':
+//     case 8: {
+//       return 'Літо'
+//     }
 
-    case 'вересень':
-    case 9:
-    case 'жовтень':
-    case 10:
-    case 'листопад':
-    case 11: {
-      return 'Весна'
-    }
+//     case 'вересень':
+//     case 9:
+//     case 'жовтень':
+//     case 10:
+//     case 'листопад':
+//     case 11: {
+//       return 'Весна'
+//     }
 
-    default: {
-      return 'Такого місяця немає';
-    }
-  }
-}
+//     default: {
+//       return 'Такого місяця немає';
+//     }
+//   }
+// }
+
+
 
