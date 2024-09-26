@@ -102,6 +102,19 @@ const video2 = {
   author: 'BBC News 2',
 }
 
-const userInput = prompt('Enter some phone key');
+// const userInput = prompt('Enter some phone key');
 
-console.log(phone[userInput]);
+// console.log(phone[userInput]);
+
+
+const testObj1 = {
+  keyA: 1
+};
+const testObj2 = testObj1;
+
+testObj2.keyB = 2
+
+
+
+console.log(testObj1 === testObj2);
+
