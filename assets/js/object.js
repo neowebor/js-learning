@@ -1,3 +1,5 @@
+"use strict";
+
 const citramon = {
   type: 'таблетки',
   doze: 2,
@@ -87,3 +89,19 @@ const testObj = {
     
   }
 }
+
+const video1 = {
+  title: 'Titan submersible is ...',
+  views: 155,
+  author: 'BBC News',
+}
+
+const video2 = {
+  title: 'title 2',
+  views: 155123123123,
+  author: 'BBC News 2',
+}
+
+const userInput = prompt('Enter some phone key');
+
+console.log(phone[userInput]);
