@@ -65,3 +65,8 @@
 
 
 
+//function declaration
+function myFunc() {
+  console.log('123');
+  
+}
