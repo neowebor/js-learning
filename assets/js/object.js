@@ -118,3 +118,7 @@ testObj2.keyB = 2
 
 console.log(testObj1 === testObj2);
 
+
+const arr = ['Kirill', 'Anna', 'Georg', 'Viktor', 'Sasha'];
+
+
