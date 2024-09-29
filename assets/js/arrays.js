@@ -43,6 +43,18 @@ const arr5 = [50, 515, 8478, 4456];
 
 const users2 = ['Lesha', 'Anton', 'Maxim'];
 
+arr5[4] = Infinity;
+
+// arr5[7] = NaN;
+
+// додавання елементів у кінець массиву
+arr5.push('push1', 'push2', 'push3');
+arr5.push(null, {}, 67, undefined);
+
+const newArray5Length = arr5.push(1500000);
+// console.log(newArray5Length);
+
+
 
 
 
