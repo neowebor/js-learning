@@ -112,7 +112,7 @@ const firstDeletedName = users.shift();
   другий параметр - вказує перед яким індексом треба зупинитися
 */
 
-console.log(arr5);
+// console.log(arr5); 
 
 const copy = arr5.slice(3, 7);
 
@@ -129,6 +129,17 @@ const copy4 = arr5.slice(1, 5);
 
 copy4[2].newProp = 'wifi';
 
+// метод join
+
+/* 
+  Перетворю масив на рядок 
+  елементи розмежуються або комами 
+  або рядком який передали як параметр
+*/
+
+const joinTest = ['Name 1', 'Name 2', true, 1000];
+
+const stringFromArr = joinTest.join();
 
 
 
