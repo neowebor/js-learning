@@ -67,6 +67,27 @@ const lastDeletedName = users.pop();
 
 // Методи масива ------------------------------------------------------------
 
+// Методи які сидять на функціяї конструкторах, а push/pop це методи екземплярів які сидять в конкретних масивав і дають їм функціонал
+
 // Перевірка чи є об'єкт масивом
 const isVipUsersArray = Array.isArray(users);
-console.log(isVipUsersArray);
+// console.log(isVipUsersArray);
+
+// додавання елементів у початок масиву
+// console.log(arr5);
+
+arr5.unshift({
+  test: true
+})
+
+// console.log(arr5);
+
+arr5.unshift(-1000, 'test 12323', null);
+
+// console.log(arr5);
+
+users.unshift('Violetta, Viktoria')
+console.log(users);
+
+
+
