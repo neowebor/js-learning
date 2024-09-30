@@ -86,8 +86,50 @@ arr5.unshift(-1000, 'test 12323', null);
 
 // console.log(arr5);
 
-users.unshift('Violetta, Viktoria')
-console.log(users);
+users.unshift('Violetta', 'Viktoria')
+// console.log(users);
+
+const firstDeletedName = users.shift();
+// console.log(firstDeletedName);
+
+
+// видалення та вставка елементів у будь-яку точку масиву
+/* 
+  Приймає необмежену кількість вхідних параметрів
+  перший параметр - індекс з якого розпочинаємо зміну масива
+  другий параметр - число, яке каже скільки елементів, починаючи з індексу треба видалити
+  всі параметри після цього будуть вставлені на вказаний індекс після видалення елементів
+*/
+// console.log(arr5);
+
+// console.log(arr5.splice(3, 1, 'hello test'));
+
+// console.log(arr5);
+
+// копіювання частини масиву у новий масив
+/* 
+  перший параметр - вказує початковий індекс
+  другий параметр - вказує перед яким індексом треба зупинитися
+*/
+
+console.log(arr5);
+
+const copy = arr5.slice(3, 7);
+
+// повна копія масиву
+const copy1 = arr5.slice();
+
+// копіює від 3 індексу до кінця
+const copy2 = arr5.slice(3);
+
+// негативні індексу теж працюють
+const copy3 = arr5.slice(-4, -2);
+
+const copy4 = arr5.slice(1, 5);
+
+copy4[2].newProp = 'wifi';
+
+
 
 
 
