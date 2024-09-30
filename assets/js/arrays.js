@@ -55,6 +55,14 @@ const newArray5Length = arr5.push(1500000);
 // console.log(newArray5Length);
 
 
+// видалення останнього елемента масиву
+const deletedValue = arr5.pop();
+
+users.push('EREN EGER');
+users.push('MIKASA AKERMAN', 'ARMIN');
+
+const lastDeletedName = users.pop();
+// console.log(lastDeletedName);
 
 
 
