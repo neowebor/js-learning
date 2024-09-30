@@ -65,4 +65,8 @@ const lastDeletedName = users.pop();
 // console.log(lastDeletedName);
 
 
+// Методи масива ------------------------------------------------------------
 
+// Перевірка чи є об'єкт масивом
+const isVipUsersArray = Array.isArray(users);
+console.log(isVipUsersArray);
