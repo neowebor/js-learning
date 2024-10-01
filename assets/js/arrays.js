@@ -215,6 +215,37 @@ const squaredNumbers = numbers.map(function(number) {
 
 console.log(squaredNumbers);
 
+// filter - створює новий масив, та заповнює його елементи, які пройшли перевірку (повернули правдиве значення) при виклику для них коллбека
+
+const oddNumbers = numbers.filter(function (number) {
+  // if(number % 2 !== 0) {
+
+  // }
+  return number % 2 !== 0;
+});
+
+console.log(oddNumbers);
+
+// some - повертає правду якщо хоч один з елементів масиву пройшов перевірку у коллбеці (колллбек повернув правду). Повертає брехню інакше
+
+const numbers2 = [1, 3, 2.5, 7, 9.99, 10.0001, 5];
+
+const isThereEvenNumbers = numbers2.some(function(number) {
+  return number % 2 === 0;
+});
+
+// every - повертає правду якщо всі з елементів масиву пройшов перевірку у коллбеці (колллбек повернув правду). Повертає брехню інакше
 
 
+// find - повертає перший елемент, який пройшов перевірку з коллбеку. якщо кожен елемент не пройде перевірку поверне undefined
+
+const number3 = [1, 2, 3, 4, 5, -2, 6, 7, -5];
+
+const negativeNumber = number3.find(function (number) {
+  return number < 0;
+})
+
+console.log(negativeNumber);
+
+// findIndex - повертає перший індекс елементу, який пройшов перевірку з коллбеку. якщо кожен елемент не пройде перевірку поверне undefined
 
