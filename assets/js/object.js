@@ -122,3 +122,35 @@ console.log(testObj1 === testObj2);
 const arr = ['Kirill', 'Anna', 'Georg', 'Viktor', 'Sasha'];
 
 
+
+
+// Прототипи
+
+/*
+Прототип - спеціальний об'єкт, який зберігає певні властивості та методи які мають бути спільними для ваших об'єктів.
+*/
+
+const message = {
+id: 0,
+  author: 'User Userenko',
+  messageText: 'Lorem Ipsum ...',
+  likes: 0,
+  dislikes: 0,
+  addLike: function() {
+    this.likes++;
+  },
+  addDislike: function() {
+    this.dislikes++;
+  },
+  removeLike: function () {
+    this.likes--;
+  }
+}
+
+const messagePrototype = {
+  removeDislike: function() {
+    console.log('dislike removed');
+  }
+}
+
+message.__proto__ = messagePrototype;
