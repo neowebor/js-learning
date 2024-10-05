@@ -148,9 +148,61 @@ id: 0,
 }
 
 const messagePrototype = {
+  addLike: function() {
+    this.likes++;
+  },
+  addDislike: function() {
+    this.dislikes++;
+  },
+  removeLike: function () {
+    this.likes--;
+  },
   removeDislike: function() {
-    console.log('dislike removed');
+    this.dislikes--;
   }
 }
 
 message.__proto__ = messagePrototype;
+
+
+const elephant = {
+  name: 'pyshok'
+};
+const mouse = {
+  name: 'Titan destroyer'
+};
+
+const parrot = {
+  name: 'Kesha'
+}
+
+const animalPrototype = {
+  animalSleeping: function() {
+    console.log(this.name + ' is sleeping');
+  }
+}
+
+elephant.__proto__ = animalPrototype;
+mouse.__proto__ = animalPrototype;
+
+elephant.animalSleeping(); // pyshok is sleeping
+mouse.animalSleeping(); // Titan destroyer is sleeping
+
+
+let currentId = 0;
+
+function Message(author, messageText) {
+  this.id = currentId++;
+  this.author = author;
+  this.messageText = messageText;
+  this.likes = 0;
+  this.dislikes = 0;
+
+  // технічно працює але можна по іншому для конструкторів
+  // this.__proto__ = messagePrototype;
+}
+
+Message.prototype = messagePrototype;
+
+const msg1 = new Message('Anonymous', 'Hello world!');
+const msg2 = new Message('User Test', 'test test test!');
