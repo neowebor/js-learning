@@ -58,6 +58,21 @@ console.log(Math.pow(5, 3)); // 125
 console.log(Math.random());
 
 
+// Методи примітивів 
+
+console.log(true);
+const boolValue = true;
+
+console.log(true.toString());
+console.log(boolValue.toString());
+
+// Number
+const num1 = 15.5;
+console.log(num1.toExponential());
+
+console.log(num1.toFixed()); // 16
+console.log(num1.toFixed(1)); // 15.5
+
 
 
 
