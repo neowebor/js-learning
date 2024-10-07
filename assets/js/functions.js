@@ -66,7 +66,37 @@
 
 
 //function declaration
-function myFunc() {
-  console.log('123');
+// function myFunc() {
+//   console.log('123');
   
+// }
+
+// Чисті функції
+/*
+  Чиста функція - це функція, яка задовільняє двом вимогам:
+    1. При однакових вхідних аргументах функція завжди повертає однаковий результат (детермінованість функції)
+    2. У функції мають бути відсутні побічні впливи/ефекти
+*/
+function sum(num1, num2) {
+  return num1 + num2;
+}
+
+// sum - детермінована функція
+const res1 = sum(2, 2);
+
+// badSum - недетермінована функція
+function badSum(num1, num2) {
+  return num1 + num2 + Math.random();
+}
+
+const res2 = badSum(2, 2);
+
+
+// 
+function multiply(num1, num2) {
+  return num1 * num2;
+}
+
+function getSquare(num) {
+  return multiply(num, num)
 }
