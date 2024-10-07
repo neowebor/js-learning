@@ -121,6 +121,9 @@ const str2 = 'Test String';
 const lowerCase = str2.toLowerCase(); // 'test string'
 const upperCase = str2.toUpperCase(); // 'TEST STRING'
 
+// replace - створює новий рядок в якому заміщує перше входження одного рядка іншим
+const replace1 = str2.replace('est', 'EST 123 ');
+
 
 
 
