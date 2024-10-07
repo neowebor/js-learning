@@ -109,6 +109,23 @@ const indexOf1 = str.indexOf('test');
 const copy1 = str.slice(0, 4) // test
 const copy2 = str.slice(0, -5) // his is test s
 
+// trim - створює новий рядок в якому пробіли з початку та кінця видаляються
+const untrimemedStr = '                  John            Doe      ';
+
+const trimmedStr = untrimemedStr.trim();
+
+// toLowerCase / toUpperCase - створюють новий рядок який буде повністю в нижньому / верхньому регістрі
+
+const str2 = 'Test String';
+
+const lowerCase = str2.toLowerCase(); // 'test string'
+const upperCase = str2.toUpperCase(); // 'TEST STRING'
+
+
+
+
+
+
 
 
 
