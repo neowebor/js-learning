@@ -134,6 +134,30 @@ const arr3 = str2.split(''); // [ "T", "e", "s", "t", " ", "S", "t", "r", "i", "
 const str3 = arr3.join('');
 
 
+const someText = 'Якийсь текст .... Тут могло бути ваше ім\'я';
+
+
+let a = 5;
+let b = 3;
+// alert(a + ' + ' + b + ' = ' + (a + b) );
+    
+
+function spinWords(string) {
+  let arr = string.split(' ');
+  let result = '';
+  for(let i = 0; i < arr.length; i++) {
+    if(arr[i].length > 5) {
+      result += arr[i].split('').reverse().join('');
+
+      arr.length > 1 ? result += ' ' : result;
+    } else {
+      result += arr[i] + ' ';
+    }
+  }
+  
+  return result.trim();
+}
+
 
 
 
