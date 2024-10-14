@@ -39,9 +39,13 @@ class House {
     this.priceOfApartment = priceOfApartment;
   }
 
+  // методи прототипу
   getFullHouseData() {
     return `This house address: ${this.address}, has ${this.floors} floors with ${this.apartmentsPerFloor} apartments on each floor. Each apartment costs ${this.priceOfApartment}`;
   }
+
+  // властивість прототипу (спільна однакова властивість всіх будинків)
+  id = NaN;
 }
 
 const house3 = new House();
