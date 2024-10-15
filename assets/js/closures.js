@@ -86,22 +86,14 @@ function createId () {
 const userIdHelper = createId();
 
 
-function createMultiplier (x) {
-  let res = 1; 
+const createMultiplier = x => y => x *= y;
 
-  function multiply(y) {
-    res *= y; 
-    return res * x;
-  }
-
-  return multiply;
-}
 
 const multiplyResult = createMultiplier(5);
 
-// console.log(multiplyResult(2)); // 2 * 5 = 10
-// console.log(multiplyResult(2)); // 20
-// console.log(multiplyResult(100)); // 2000
+console.log(multiplyResult(2)); // 2 * 5 = 10
+console.log(multiplyResult(2)); // 20
+console.log(multiplyResult(100)); // 2000
 
 function inBetween(a, b) {
   return function(x) {
@@ -110,7 +102,7 @@ function inBetween(a, b) {
 }
 
 let arr = [1, 2, 3, 4, 5, 6, 7];
-alert( arr.filter(inBetween(3, 6)) );
+// alert( arr.filter(inBetween(3, 6)) );
 
 // Смотри на то, что у тебя inBetween возвращает функцию и эта функция вызывается для каждого элемента в фильтре (так работает filter)
 
