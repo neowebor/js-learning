@@ -213,7 +213,7 @@ const squaredNumbers = numbers.map(function(number) {
   return number * number;
 });
 
-console.log(squaredNumbers);
+// console.log(squaredNumbers);
 
 // filter - створює новий масив, та заповнює його елементи, які пройшли перевірку (повернули правдиве значення) при виклику для них коллбека
 
@@ -224,7 +224,7 @@ const oddNumbers = numbers.filter(function (number) {
   return number % 2 !== 0;
 });
 
-console.log(oddNumbers);
+// console.log(oddNumbers);
 
 // some - повертає правду якщо хоч один з елементів масиву пройшов перевірку у коллбеці (колллбек повернув правду). Повертає брехню інакше
 
@@ -245,7 +245,14 @@ const negativeNumber = number3.find(function (number) {
   return number < 0;
 })
 
-console.log(negativeNumber);
+// console.log(negativeNumber);
 
 // findIndex - повертає перший індекс елементу, який пройшов перевірку з коллбеку. якщо кожен елемент не пройде перевірку поверне undefined
 
+
+
+// reduce - метод обходу масиву який на основі елементів масиву може отримати якесь одне значення на основі коллбек функції, яку називають ред'юсером
+
+const numbers4 = [10, 2, 3, 4, 5, 6, 7, 8];
+
+const numbers4TotalSum = numbers4.reduce((accumulator, number) => accumulator + number);
