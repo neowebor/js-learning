@@ -112,4 +112,17 @@
 // console.log(checkEvenNumber(userNumber));
 
 
+function getStringsAmount(...elems) {
+  return elems.flat(Infinity).filter(elem => typeof elem === 'string').length;
+}
 
+const arr = [1, -10, true, 'test', 'hello@gmail.com', null, 'undefined', Infinity]
+
+console.log(getStringsAmount(...arr, '123', '23', 'test', ['123', ['very important']]))
+
+
+function mathPow(num, e) {
+  if(e === 0) return 2;
+
+  return e < 0 ? 1 / (num * mathPow(num, -e - 1)) : num * mathPow(num, e - 1);
+}

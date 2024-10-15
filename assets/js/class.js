@@ -49,30 +49,89 @@ class House {
 }
 
 const house3 = new House();
-const house4 = new House(4, 4, 'test street 4', 10000);
-
+const house4 = new House(4, 4, "test street 4", 10000);
 
 class Product {
-  constructor (productName, price, totalQuantityOnStock = 100, isForAdults) {
-    this.productName = productName;
+  constructor(productName, price, totalQuantityOnStock = 100, isForAdults) {
+    this.name = productName; // тут визивається сеттер name
     this.price = price;
-    this.totalQuantityOnStock = totalQuantityOnStock;
+    this.amount = totalQuantityOnStock;
     this.isForAdults = isForAdults;
   }
 
-  getTotalProductSum () {
+  get name() {
+    return this._productName;
+  }
+
+  set name(newName) {
+    if (typeof newName !== "string" || newName.trim().length === 0) {
+      throw new TypeError("name of a product must be string");
+    }
+    this._productName = newName; // тут з'являється _name у об'єкті продукта
+  }
+
+  get price() {
+    return this._price;
+  }
+
+  set price(newPrice) {
+    if (typeof newPrice !== "number" || isNaN(newPrice)) {
+      throw new TypeError("price of a product must be numeric");
+    }
+
+    if (newPrice < 0) {
+      throw new RangeError("price must not be negative number");
+    }
+
+    this._price = newPrice;
+  }
+
+  get amount() {
+    return this._amount;
+  }
+
+  set amount(newTotalAmountOnStock) {
+    if (
+      typeof newTotalAmountOnStock !== "number" ||
+      isNaN(newTotalAmountOnStock)
+    ) {
+      throw new TypeError("amount of a product must be numeric");
+    }
+
+    if (newTotalAmountOnStock < 0) {
+      throw new RangeError("amount must not be negative number");
+    }
+
+    this._amount = newTotalAmountOnStock;
+  }
+
+  get isForAdults() {
+    return this._isForAdults;
+  }
+
+  set isForAdults(newBooleanValue) {
+    if (typeof newBooleanValue !== "boolean") {
+      throw new TypeError("isForAdult of a product must be boolean");
+    }
+
+    this._isForAdults = newBooleanValue;
+  }
+
+  getTotalProductSum() {
     return this.totalQuantityOnStock * this.price;
   }
-}
 
-const phones = new Product('Galaxy s10', 12000, 20, false);
-console.log(phones.getTotalProductSum())
-
-const owner1 = {
-  name: 'Owner 1',
-  email: 'owner1@gmail.com',
-  balance: 5000
+  static isProduct(obj) {
+    return obj instanceof Product;
+  }
 }
+const phones = new Product("Galaxy s10", 12000, 20, false);
+
+// const owner1 = {
+//   name: 'Owner 1',
+//   email: 'owner1@gmail.com',
+//   balance: 5000
+// }
 
 //
 // if(owner1.balance >= (phones.price * phones.totalQuantityOnStock) ) {
