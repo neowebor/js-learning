@@ -255,4 +255,4 @@ const negativeNumber = number3.find(function (number) {
 
 const numbers4 = [10, 2, 3, 4, 5, 6, 7, 8];
 
-const numbers4TotalSum = numbers4.reduce((accumulator, number) => accumulator + number);
+const numbers4TotalSum = numbers4.reduce((accumulator, number) => accumulator + number, 0);
