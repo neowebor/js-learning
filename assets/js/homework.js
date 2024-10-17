@@ -122,7 +122,22 @@ console.log(getStringsAmount(...arr, '123', '23', 'test', ['123', ['very importa
 
 
 function mathPow(num, e) {
-  if(e === 0) return 2;
+  if(typeof num !== 'number' || isNaN(num)) {
+    throw new TypeError('Invalid type. Number expected')
+  }
+
+  if(typeof e !== 'number' || isNaN(e)) {
+    throw new TypeError('Invalid type. Number expected')
+  }
+
+  if(e === 0) return 1;
 
   return e < 0 ? 1 / (num * mathPow(num, -e - 1)) : num * mathPow(num, e - 1);
 }
+
+// (2, 4)
+//    2 * (2, 3) 16
+//          2 * (2, 2) 8
+//              2 * (2, 1)  4
+//                2 * (2, 0) 2
+//                        1                          
