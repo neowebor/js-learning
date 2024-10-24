@@ -282,7 +282,7 @@ class Animal {
     // 0 (роззлючена) - 100 (задоволена)
     this.#mood = 50;
 
-    this.#secret = 'try find be';
+    this.#secret = "try find be";
   }
 
   get hunger() {
@@ -341,14 +341,14 @@ class Animal {
   }
 
   sleep() {
-    this.energy += 50;;
+    this.energy += 50;
 
     console.log("тваринка спить");
   }
 
   eat() {
     this.hunger += 5;
-    this.mood += 10;;
+    this.mood += 10;
 
     console.log("тваринка їсть");
   }
@@ -367,11 +367,11 @@ const animal1 = new Animal("Мурзик", "Кіт");
 
 class Dog extends Animal {
   constructor(nickname) {
-    super(nickname, 'dog');
+    super(nickname, "dog");
   }
 }
 
-const dog1 = new Dog('dog1234');
+const dog1 = new Dog("dog1234");
 
 // 4. Абстракція - (не всіма вважається окремим концепцією)
 /* 
@@ -382,32 +382,200 @@ const dog1 = new Dog('dog1234');
 class Computer {
   #isOn;
 
-  constructor () {
+  constructor() {
     this.#isOn;
   }
 
   // низкорівневі (складні для розуміння для загальної маси людей) методи
-  #applyCurrent () {
+  #applyCurrent() {}
 
-  }
+  #enablePeriferyDevices() {}
 
-  #enablePeriferyDevices () {
+  #startBIOS() {}
 
-  }
-
-  #startBIOS () {
-
-  }
-
-  #startOS () {
-
-  }
+  #startOS() {}
 
   // високорівневий метод (простий у використанні)
   turnOn() {
-    this.#applyCurrent;
-    this.#enablePeriferyDevices;
-    this.#startBIOS;
-    this.#startOS;
+    this.#applyCurrent();
+    this.#enablePeriferyDevices();
+    this.#startBIOS();
+    this.#startOS();
   }
 }
+
+/*
+  SOLID 
+
+    S - SRP - принцип єдиної відповідальності (Single responsibility principle)
+    O - OCP - Принцип відкритості/закритості (Open/closed principle)
+    L - LSP - Принцип підстановки Лісков (Liskov substitution principle)
+    I - ISP - Принцип розділення інтерфейсу (Interface segregation principle)
+    D - DIP - Принцип інверсії залежностей (Dependency inversion principle)
+*/
+
+// Принципе єдиної відповідальності - кожен об'єект / метод / клас має мати лише одну річ для якої він використовується
+
+// Не треба змушувати функцію бути швейцарським ножем.
+
+// 2 + 2
+// '2' + 2
+
+// function calculateSalary (worker) {
+//   const salary = worker.hoursWorked * worker.hourlyRate;
+
+//   return salary;
+// }
+
+// function generateReport(worker, salary) {
+//   const performanceReport = worker.hoursWorked;
+//   return performanceReport;
+// }
+
+// Принцип відкритості/закритості
+/* 
+  Код має бути відкритим для розширення але закритим для прямих змін
+*/
+
+// class Worker {
+//   constructor(fullName, hoursWorked, hourlyRate, education, workplace) {
+//     this.fullName = fullName;
+//     this.hoursWorked = hoursWorked;
+//     this.hourlyRate = hourlyRate;
+//     this.education = education;
+//     this.workplace = workplace;
+//   }
+// }
+
+// const workers = [];
+
+// class WorkerFilter {
+//   static filterByName (workers, fullName) {
+//     return workers.filter(worker => worker.fullName === fullName);
+//   }
+
+//   static filterByEducation (workers, education) {
+//     return workers.filter(worker => worker.education === education);
+//   }
+
+//   static filterByRate (workers, hourlyRate) {
+//     return workers.filter(worker => worker.hourlyRate === hourlyRate);
+//   }
+// }
+
+// const filterByProp = (array, propName, propValue) => {
+//   return array.filter(element => element[propName] === propValue);
+// }
+
+// Принцип підстановки лісков
+// екземпляри базового класу мають бути заміненими екземплярами успадкуючих класів без зміни коду
+
+// class Figure {
+//   constructor(name) {
+//     this.name = name;
+//   }
+
+//   getArea() {
+//     console.log(`this function will calculate area of ${this.name}`);
+//      return 0;
+//   }
+
+//   static isFigure(figure) {
+//     return figure instanceof Figure;
+//   }
+// }
+
+// class Rectangle extends Figure {
+//   constructor(a, b) {
+//     super("rectangle");
+//     this.a = a;
+//     this.b = b;
+//   }
+
+//   getArea() {
+//     return this.a * this.b;
+//   }
+// }
+
+// class Triangle extends Figure {
+//   constructor(a, h) {
+//     super("triangle");
+//     this.a = a;
+//     this.h = h;
+//   }
+
+//   getArea() {
+//     return this.a * this.h * 0.5;
+//   }
+// }
+
+// Принцип розділення інтерфейсу - якщо якийсь метод успадковується, але він нам не потрібен, то значить він зайвий в тому класі від якого ми його успадковуєм
+class Product {
+  constructor() {
+    // ...
+  }
+
+  getDetails() {
+    // ...
+  }
+
+  displayInFrontend () {
+    // ...
+  }
+
+  // saveToDataBase () {
+  //   // ...
+  // }
+}
+
+class DigitalProduct extends Product {
+  constructor() {
+    super();
+    // ...
+  }
+
+  // по умовам завдання saveToDataBase не має бути
+}
+
+class PhysicalProduct extends Product {
+  constructor() {
+    super();
+    // ...
+  }
+
+  saveToDataBase () {
+    // ...
+  }
+}
+
+// Принцип інверсії залежностей
+
+class DeliveryService {
+
+}
+
+class NovaPoshtaDelivery extends DeliveryService {
+
+}
+
+class UkrPoshtaDelivery extends DeliveryService {
+
+}
+
+class Order {
+  constructor (deliveryService) {
+    // ...
+    this.deliveryService = deliveryService;
+  }
+}
+
+// DRY - (Don't repeat yourself)
+function generateAccessToken(data, options) {
+  const token = data.toString();
+
+  // ... якийсь код генерації цього токена
+
+  return token;
+}
+
+// KISS (Keep it simple stupid) - між рішення, яке є складнішим для розуміння і більш простим кодом, варто обирати самій простіший запис
