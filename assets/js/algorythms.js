@@ -34,7 +34,7 @@
 */
 
 // O(1) -константна складність 
-const arr1 = [1, 5, 7, 20, 5];
+const arr1 = [1, 5, 7, 20, 5, -50];
 
 function getElemOfArray (array, elemIndex) {
   return array[elemIndex];
@@ -52,3 +52,26 @@ function getElemIndex (array, elemValue) {
 }
 
 getElemIndex(arr1, 20);
+
+// O(n^2) - квадратична складність
+/* 
+  1. Проходимось по масиву та порівнюємо два сусідних елементи
+  2. якщо в першого значення більше ніж у другого то міняємо їх місцями
+  3. повторюємо ці дії поки найбільші значення не опиняться в кінці масиву
+    а найменші у початку
+*/
+function bubbleSort(array) {
+  for(let i = 0; i < array.length; i++) {
+    for(let j = 1; j < array.length; j++) {
+      let value1 = array[j - 1];
+      let value2 = array[j];
+
+      if(value1 > value2) {
+        array[j] = value1;
+        array[j - 1] = value2;
+      }
+    }
+  }
+
+  return array;
+}
