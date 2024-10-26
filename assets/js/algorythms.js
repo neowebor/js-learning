@@ -32,3 +32,10 @@
   y = x -> O(n)
   y = 2^n -> O(2^n)
 */
+
+// O(1) -константна складність 
+const arr1 = [1, 5, 7, 20, 5];
+
+function getElemOfArray (array, elemIndex) {
+  return array[elemIndex];
+}
