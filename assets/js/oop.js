@@ -570,11 +570,14 @@ class Order {
 }
 
 // DRY - (Don't repeat yourself)
+/**
+ * @param {object} data
+ * @returns {string}
+ */
 function generateAccessToken(data, options) {
-  const token = data.toString();
-
   // ... якийсь код генерації цього токена
-
+  const token = data.toString();
+  
   return token;
 }
 
