@@ -80,7 +80,39 @@ function getRandomArbitrary(min, max) {
   return Math.random() * (max - min) + min;
 }
 
-const numbers = new Array(8000).fill(null).map(() => getRandomArbitrary(-5000, 5000));
-console.log('start');
-bubbleSort(numbers);
-console.log('end')
+// const numbers = new Array(8000).fill(null).map(() => getRandomArbitrary(-5000, 5000));
+// console.log('start');
+// bubbleSort(numbers);
+// console.log('end')
+
+// O(log N) - логарифмічна складність
+/* 
+  Бінарний пошук
+    Масив обов'язково має бути відсортованим
+    1. Знаходимо середину масиву і перевіряємо значення у ній
+    2.1 якщо співпало то кінець
+    2.2 якщо значення меньше то відсікаємо ліву частину включно з середини
+    2.3 якщо значення більше то відсікаємо праву частину включно з середини
+    Повторюємо все з п1 поки не зайдемо значення або елементи не скінчаться
+*/
+
+function binarySearch(array, targetElem) {
+  let startingIndex = 0;
+  let lastIndex = array.length - 1;
+
+  while(startingIndex <= lastIndex) {
+    let middleIndex = Math.floor((startingIndex + lastIndex) / 2);
+
+    if(array[middleIndex] === targetElem) {
+      return middleIndex;
+    }
+
+    if(array[middleIndex] < targetElem) {
+      startingIndex = middleIndex + 1;
+    } else {
+      lastIndex = middleIndex - 1;
+    }
+  }
+
+  return -1;
+}
