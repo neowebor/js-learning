@@ -147,6 +147,10 @@ class DoubleLinkedList {
     // 4. повертаємо вузол який видалили
     return deletedNode;
   }
+
+  [Symbol.iterator]() {
+    return new LinkedListIterator(this);
+  }
 }
 
 const list1 = new DoubleLinkedList();
@@ -156,3 +160,50 @@ list1.push("second");
 list1.push("third");
 
 console.log(list1);
+
+class LinkedListIterator {
+  constructor(list) {
+    this.list = list;
+    this.currentNode = null;
+  }
+
+  next() {
+    this.currentNode = this.currentNode ? this.currentNode.next : this.currentNode = this.list.head
+
+    return {
+      done: !this.currentNode,
+      value: this.currentNode,
+    };
+  }
+}
+
+// list1[Symbol.iterator] = function () {
+
+//   let currentNode = null;
+
+//   const iterator = {
+//     next: function() {
+
+//       if(currentNode) {
+//         currentNode = currentNode.next;
+//       } else {
+//         currentNode = list1.head;
+//       }
+
+//       const obj = {
+//         done: !currentNode,
+//         value: currentNode,
+//       }
+
+//       return obj
+//     }
+//   };
+
+//   return iterator;
+// }
+
+// const listIterator = list1[Symbol.iterator]();
+
+for (const node of list1) {
+  console.log(node);
+}
