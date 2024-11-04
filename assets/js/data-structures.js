@@ -168,7 +168,7 @@ class LinkedListIterator {
   }
 
   next() {
-    this.currentNode = this.currentNode ? this.currentNode.next : this.currentNode = this.list.head
+    this.currentNode = this.currentNode ? this.currentNode.next : this.list.head
 
     return {
       done: !this.currentNode,
