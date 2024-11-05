@@ -39,7 +39,7 @@ set1.delete(user);
 // повністю очистити Set
 // set1.clear();
 
-console.log(set1);
+// console.log(set1);
 
 // перевірити наявність елементу у сеті
 const hasResult1 = set2.has(3);
@@ -64,9 +64,9 @@ const obj = {
   [Symbol('private')]: true,
 }
 
-for(const key in obj) {
-  console.log(key);
-}
+// for(const key in obj) {
+//   console.log(key);
+// }
 
 /*
   відмінності мапи від об'єкта:
@@ -90,6 +90,16 @@ obj[user2] = 'this is other user';
 
 // створення пустої мапи
 const map1 = new Map();
+
+// створення заповненої мапи
+const map2 = new Map([
+  // кортежі (tuples)
+  // масиви з конкретною кількістю елементів
+  // та певним порядком розміщення цих елементів
+  ['key', 'value'],
+  ['other key', 1000],
+  [500, false]
+])
 
 // додавання або перезаписує елементів до мапи
 map1.set('key', 10000);
@@ -118,11 +128,52 @@ const deleteRes = map1.delete(123);
 // map1.clear();
 
 // розміри мапи 
-console.log(map1.size);
+// console.log(map1.size);
 
 // forEach
-map1.forEach((value, key, map) => {
-  console.log(`value is ${value}`);
-  console.log(`key is ${key}`);
-  console.log(`map is ${map}`);
-})
+// map1.forEach((value, key, map) => {
+//   console.log(`value is ${value}`);
+//   console.log(`key is ${key}`);
+//   console.log(`map is ${map}`);
+// })
+
+// cache
+// уявна функція яка довго працює
+
+// function expensiveCalculations(number) {
+//   // якісь складні довгі обчислення
+//   for(let i = 0; i < 3_000_000_000; i++) {}
+//   return number * 2;
+// }
+
+// console.log(expensiveCalculations(5));
+
+// const cache = new Map();
+
+// function effectiveCalculations(number) {
+//   if(cache.has(number)) {
+//     return cache.get(number);
+//   } 
+
+//   const result = expensiveCalculations(number);
+//   cache.set(number, result);
+
+//   return result;
+// }
+
+function createLettersMap(string, ignoredSymbols = [' ', ',', '.', '!', '-']) {
+  const letterMap = new Map();
+
+  for(const letter of string) {
+    if(!ignoredSymbols.includes(letter)) {
+      letterMap.set(letter, letterMap.has(letter) ? letterMap.get(letter) + 1 : 1)
+    }
+
+  }
+
+  return letterMap;
+}
+
+const str = 'test, text.';
+
+const letterMap1 = createLettersMap(str);
